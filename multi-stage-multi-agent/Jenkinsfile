@@ -11,10 +11,10 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'sql:latest' }
+        docker { image 'nginx:latest' }
       }
       steps {
-        sh 'SELECT * FROM XYZ'
+        sh 'nginx --version'
       }
     }
   }
